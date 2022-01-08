@@ -78,15 +78,14 @@
                 </button>
               </p>
           </div> -->
-          
 
-       
         <div class="d-flex justify-content-center p-3">
           <button
             type="button"
             class="size m-0"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
+            data-bs-target="#exampleModal"
+          >
             Instructions
           </button>
 
@@ -95,8 +94,8 @@
             id="exampleModal"
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-
+            aria-hidden="true"
+          >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -107,9 +106,12 @@
                     type="button"
                     class="btn-close"
                     data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body"><h4>Select a Cuisine to get a Random Resturant.</h4></div>
+                <div class="modal-body">
+                  <h4>Select a Cuisine to get a Random Resturant.</h4>
+                </div>
                 <div class="modal-footer">
                   <button type="button" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -119,7 +121,7 @@
         </div>
 
         <div class="d-flex justify-content-center m-0 p-0">
-          <div class="card m-0 ">
+          <div class="card m-0">
             <!-- <div class = "card">
                     <form>
                         <input type="text" name="search" placeholder="Search..." />
@@ -132,31 +134,36 @@
                     </div>
                 </div> -->
             <form>
-                <select id = "userInput" class="form-select form-select-lg" aria-label=".form-select-sm example">
-                    <option selected>Select a Cuisine</option>
-                    <option value="1">Mexican</option>
-                    <option value="2">Italian</option>
-                    <option value="3">American</option>
-                    <option value="4">Indian</option>
-                    <option value="5">Chinese</option>
-                    <option value="6">Random Resturant</option>
-                  </select>
+              <select
+                id="userInput"
+                class="form-select form-select-lg"
+                aria-label=".form-select-sm example"
+              >
+                <option selected>Select a Cuisine</option>
+                <option value="1">Mexican</option>
+                <option value="2">Italian</option>
+                <option value="3">American</option>
+                <option value="4">Indian</option>
+                <option value="5">Chinese</option>
+                <option value="6">Random Resturant</option>
+              </select>
 
               <div class="d-flex justify-content-center">
-                <button id = "submitButton" type="button">Submit</button>
+                <button id="submitButton" type="button">Submit</button>
               </div>
               <div class="d-flex justify-content-center">
                 <a href="../index.html">
-                <button
-                  class="d-none d-md-block d-lg-none d-sm-block"
-                  type="button">
-                  Back
-                </button>
+                  <button
+                    class="d-none d-md-block d-lg-none d-sm-block"
+                    type="button"
+                  >
+                    Back
+                  </button>
                 </a>
               </div>
             </form>
             <div>
-              <h2 class = "fs-4"id = "result">Result Goes Here</h2>
+              <h2 class="fs-2" id="result">Result Goes Here</h2>
             </div>
           </div>
         </div>
@@ -179,7 +186,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src = "../scripts/MiniCh9.js"></script>
+    <script src="../scripts/MiniCh9.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

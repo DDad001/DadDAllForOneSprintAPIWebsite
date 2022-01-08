@@ -1,64 +1,59 @@
+let result = document.getElementById("result");
+let submitButton = document.getElementById("submitButton");
+let userInput = document.getElementById("userInput");
 
-  let result = document.getElementById('result');
-  let submitButton = document.getElementById('submitButton');
-  let userInput = document.getElementById('userInput');
-    
-    function allLetter(userInput)
-    {
-     let letters = /[A-Za-z]/;
-     if(userInput.value.match(letters))
-       {
-        return true;
-       }
-     else
-       {
-       result.textContent = "Invalid Input";
-       alert("Enter in Letters Only");
-       document.getElementById('userInput').value = "";
-       return false;
-       }
-    }
-  
-  
-  let miniChallenge1URL =
+function allLetter(userInput) {
+  let letters = /^[A-Za-z]+$/;
+  if (userInput.value.match(letters)) {
+    let displayName = userInput.value;
+    let miniChallenge1Model = {
+      userName: displayName,
+    };
+
+    ModelMethod(miniChallenge1URL, miniChallenge1Model);
+  } else {
+    result.textContent = "Invalid Input";
+    alert("Enter in Letters Only");
+    userInput.value = "";
+    return false;
+  }
+}
+
+let miniChallenge1URL =
   "https://daddallforoneminichallenges.azurewebsites.net/AllForOne/miniCh1";
 
+function ModelMethod(url, model) {
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(model),
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      result.textContent = data;
+    });
+}
 
-  function ModelMethod(url, model) {
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(model),
-    })
-      .then((response) => response.text())
-      .then((data) => {
-          result.textContent = data;
-        });
-    
-  }
+// function checkUser()
+// {
+//     if(userInput.value === "")
+//     {
+//         result.textContent == "invalid input";
+//     }
+// }
 
-  function checkUser()
-  {
-      if(userInput.value === "")
-      {
-          result.textContent == "invalid input";
-      }
-  }
+submitButton.addEventListener("click", function () {
+  // checkUser();
+  allLetter(userInput);
 
-  
+  // checkForEmpty();
+});
 
-
-  submitButton.addEventListener('click',function(){
-
-        checkUser();
-        allLetter(userInput);
-        let displayName = userInput.value;
-
-        let miniChallenge1Model = {
-        userName: displayName
-      };
-
-      ModelMethod(miniChallenge1URL, miniChallenge1Model);
-  });
+// function checkForEmpty()
+// {
+//   if(userInput.value === undefined || userInput.value == null || userInput.value.length <= 0){
+//    result.textContent = "Invalid Input";
+//     }
+// }
