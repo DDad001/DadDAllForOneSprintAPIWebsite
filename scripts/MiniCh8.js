@@ -29,7 +29,7 @@ function checkRandomStudent() {
         result2.textContent = "Last Name: " + students.lastName;
         result3.textContent = "Slack Name: " + students.slackName;
         result4.textContent = "Email: " + students.email;
-        result5.textContent = "Hobbies " + students.hobbies;
+        result5.textContent = "Hobbies: " + students.hobbies;
       });
   }
   RanStudent();
@@ -52,7 +52,7 @@ function ModelMethod(url, model) {
       result2.textContent = "Last Name: " + students.lastName;
       result3.textContent = "Slack Name: " + students.slackName;
       result4.textContent = "Email: " + students.email;
-      result5.textContent = "Hobbies " + students.hobbies;
+      result5.textContent = "Hobbies: " +":"+ students.hobbies;
     });
 }
 
@@ -75,6 +75,7 @@ let result1 = document.getElementById("result1");
 let result2 = document.getElementById("result2");
 let result3 = document.getElementById("result3");
 let result4 = document.getElementById("result4");
+let result5 = document.getElementById("result5");
 let selector = document.getElementById("selector");
 let RandomButton = document.getElementById("RandomButton");
 
