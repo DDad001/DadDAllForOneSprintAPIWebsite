@@ -29,7 +29,7 @@ function ModelMethod(url, model) {
 }
 
 function allLetter(userInput1) {
-  let letters = /^[A-Za-z]+$/;
+  let letters = /^[a-zA-Z\s]+$/;
   if (userInput1.value.match(letters)) {
     let displayNum1 = userInput1.value;
     let displayNum2 = userInput2.value;

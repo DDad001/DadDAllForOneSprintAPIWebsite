@@ -52,7 +52,7 @@ function allNumbers(userInput1) {
 }
 
 submitButton.addEventListener("click", function () {
-  let letters = /^[A-Za-z]+$/;
+  let letters = /^[a-zA-Z\s]+$/;
   if (selector.value == 1) {
     allNumbers(userInput1);
   } else if (selector.value == 2 && userInput1.value.match(letters)) {

@@ -31,7 +31,7 @@ function ModelMethod(url, model) {
 }
 
 function LettersOnly(allstrings) {
-  let letters = /^[A-Za-z]+$/;
+  let letters = /^[a-zA-Z\s]+$/;
   if (allstrings.match(letters)) {
     let miniChallenge5Model = {
       name: userInput1.value,

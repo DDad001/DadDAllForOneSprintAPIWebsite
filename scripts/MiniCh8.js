@@ -79,6 +79,7 @@ let result5 = document.getElementById("result5");
 let selector = document.getElementById("selector");
 let RandomButton = document.getElementById("RandomButton");
 
+
 submitButton.addEventListener("click", function () {
   checkSearchBy();
 });
@@ -126,3 +127,28 @@ function checkSearchBy() {
     ModelMethod(miniChallenge8HobbiesURL, miniChallenge8HobbiesModel);
   }
 }
+
+selector.addEventListener("change", function () {
+
+  if(selector.value == 1)
+  {
+    document.getElementsByName('textField')[0].placeholder = 'Enter First Name...';
+  }
+  else if(selector.value == 2)
+  {
+    document.getElementsByName('textField')[0].placeholder = 'Enter Last Name...';
+  }
+  else if(selector.value == 3)
+  {
+    document.getElementsByName('textField')[0].placeholder = 'Enter Slack Name...';
+  }
+  else if(selector.value == 4)
+  {
+    document.getElementsByName('textField')[0].placeholder = 'Enter Email...';
+  }
+  else if(selector.value == 5)
+  {
+    document.getElementsByName('textField')[0].placeholder = 'Enter Hobbies...';
+  }
+  
+});

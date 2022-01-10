@@ -3,20 +3,24 @@ let submitButton = document.getElementById("submitButton");
 let userInput = document.getElementById("userInput");
 
 function allLetter(userInput) {
-  let letters = /^[A-Za-z]+$/;
-  if (userInput.value.match(letters)) {
+  let letters = /^[a-zA-Z\s]+$/;
+  if (userInput.value.match(letters)) 
+  {
     let displayName = userInput.value;
     let miniChallenge1Model = {
       userName: displayName,
     };
 
     ModelMethod(miniChallenge1URL, miniChallenge1Model);
-  } else {
+  }
+   else
+    {
     result.textContent = "Invalid Input";
     alert("Enter in Letters Only");
     userInput.value = "";
     return false;
   }
+ 
 }
 
 let miniChallenge1URL =
@@ -36,6 +40,16 @@ function ModelMethod(url, model) {
     });
 }
 
+// function checkForWhiteSpaces()
+// {
+// document.getElementsByName("10010input")[0];
+//  let val = userInput.value.replace(/\s/g, "");
+// alert(val);
+// }
+// function removeSpaces(userInput) {
+//  result = userInput.value.split(' ').join('');
+//  }
+
 // function checkUser()
 // {
 //     if(userInput.value === "")
@@ -47,7 +61,6 @@ function ModelMethod(url, model) {
 submitButton.addEventListener("click", function () {
   // checkUser();
   allLetter(userInput);
-
   // checkForEmpty();
 });
 
